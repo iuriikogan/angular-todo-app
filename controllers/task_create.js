@@ -1,0 +1,8 @@
+// Import db_task
+const db_task = require('../models/task')
+
+module.exports = function(req, res, next) {
+	db_task.create(req.body).then(function(new_task) {
+		res.status(201).json(new_task)
+	})
+}
