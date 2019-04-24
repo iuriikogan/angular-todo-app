@@ -16,7 +16,7 @@
             <form role="form" id="new_task">
                 <input type="text" class="form-control" placeholder="Your Task" name="task" [{ng.model=tasks]>
             </form>
-            <button type="button" class="btn btn btn-primary" ng-click=(add_task)>Add</button>
+            <button type="button" class="btn btn btn-primary" ng-click=($add_task)>Add</button>
         </div>
 
         <div class="alert-success" id="tasks">

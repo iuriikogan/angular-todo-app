@@ -7,11 +7,7 @@ tasks_app.controller('tasks', ['$scope', '$http', function($scope, $http) {
     const get_tasks = function() {
         $http({
             method: GET,
-<<<<<<< HEAD
-            url:'api/tasks'
-=======
             url:'/api/tasks'
->>>>>>> origin/master
         })
     }.then((function(res){
         $scope.tasks = res.tasks    
@@ -22,11 +18,7 @@ tasks_app.controller('tasks', ['$scope', '$http', function($scope, $http) {
     add_task = function() {
         $http({
             method: POST,
-<<<<<<< HEAD
-            url:'api/tasks',
-=======
             url:'/api/tasks',
->>>>>>> origin/master
             data: {
                 name: $scope.task
             }
@@ -34,7 +26,9 @@ tasks_app.controller('tasks', ['$scope', '$http', function($scope, $http) {
         })
     }.then((function(req){
         $scope.tasks = req.tasks
+        $scope.tasks = ''
         return $scope.tasks    
+        
     },function(err){
         console.log('err', err);
     }))
