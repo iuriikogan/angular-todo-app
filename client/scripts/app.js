@@ -30,7 +30,7 @@ tasks_app.controller('tasks', ['$scope', '$http', function ($scope, $http) {
         })
     }.then((function (res) {
         $scope.task.push(res.task)
-        console.log("TCL: add_task -> req.task", req.task)
+        console.log("add_task -> req.task", req.task)
         $scope.task = ''
         return $scope.task
     }, function (err) {
@@ -58,12 +58,11 @@ tasks_app.controller('tasks', ['$scope', '$http', function ($scope, $http) {
     }
     //complete a task
     $scope.complete_task = function (selected_task) {
-        $http({
-
+        $http(
         }).then(function (req) {
             $scope.tasks.filter(function (tasks) {
                 get_tasks()
-                return req.body.task
+                return req.tasks
             }).then(function (err) {
                 console.log('err', err);
             })

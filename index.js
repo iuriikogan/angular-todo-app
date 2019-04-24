@@ -14,8 +14,8 @@ app.use(body_parser.urlencoded({ // understands form submits
 app.use(cors())
 
 // Routes
-require('./routes-client.js')(app)
-require('./routes-api.js')(app)
+require('./routes/routes-client')(app)
+require('./routes/routes-api')(app)
 // Static
 app.use(express.static(__dirname + '/client')) // serves all files in the /client folder as static
 // Errors
