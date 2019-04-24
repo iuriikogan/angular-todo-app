@@ -1,0 +1,27 @@
+body {
+    margin: auto;
+    padding: 2em;
+    text-align: center;
+    width: 60vw;
+}
+
+li:active{
+    background-color: darkgrey;
+}
+.delete {
+    float: right;
+    width: fit-content !important;
+    text-align: center;  
+}
+.check {
+    float: left;
+    margin-top: 1rem;
+    margin-left: 1rem;   
+}
+.tasks{
+    height: 4rem !important;
+}
+header img {
+    max-width: 2vw;
+    max-height: 3vw;
+}
