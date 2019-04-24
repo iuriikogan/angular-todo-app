@@ -17,13 +17,15 @@
             <form role="form" id="new_task">
                 <input type="text" class="form-control" placeholder="Your Task" name="task" [{ng.model=task]>
             </form>
-            <button type="button" class="btn btn btn-primary" ng-click=(add_task())>Add</button>
+            <button type="button" class="btn btn btn-primary" ng-click=(add_task(req.body))>Add</button>
         </div>
 
-        <div class="container" id="task">
-            <input type="checkbox" class="check" ng-click="delete_task">
-            <li ng-click ng-class="active" : selected_task = ="select_task(task)" ng-class="{'active' : selected_task == task')">{{tasks.name}}</li>
+        <div class="container" id="task" ng-repeat="task in tasks">
+            <uL>
+            <input type="checkbox" class="check" ng-click="delete_task()"">
+            <li class="list-group-itemng-click ng-class="active" : selected_task = ="select_task(task)" ng-class="{'active' : selected_task == task')">{{tasks.name}}</p>
             <button ng-click(delete_task(task)) class="delete" ng-click="delete_task(select_task)">x</button>
+            </uL>
         </div>
     </body>
 

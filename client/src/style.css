@@ -1,8 +1,8 @@
 body {
     margin: auto;
     padding: 2em;
-    text-align: center;
-    width: 60vw;
+    text-align: center !important;
+    width: 100vw;
     
 }
 
@@ -18,9 +18,6 @@ li:active{
     float: left;
     margin-top: 1rem;
     margin-left: 1rem;   
-}
-.tasks{
-    height: 4rem !important;
 }
 header img {
     max-width: 2vw;

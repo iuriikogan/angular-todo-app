@@ -17,8 +17,8 @@ tasks_app.controller('tasks', ['$scope', '$http', function ($scope, $http) {
     }, function (err) {
         console.log('err', err);
     }))
-
-
+    //get all taks and loop them into the ui
+    get_tasks()
     //add a task
     add_task = function () {
         $http({
