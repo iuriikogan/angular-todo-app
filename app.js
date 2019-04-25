@@ -28,7 +28,7 @@ tasks_app.controller('tasks', ['$scope', '$http', function ($scope, $http) {
         })
     }.then((function (res) {
         $scope.task.push(res.task)
-        console.log("add_task -> req.task", req.task)
+        console.log("add_task -> res.task", res.task)
         $scope.task = ''
         return $scope.task
     }, function (err) {
@@ -37,7 +37,8 @@ tasks_app.controller('tasks', ['$scope', '$http', function ($scope, $http) {
 
     // selected_task
     $scope.select_task = function(task) {
-		$scope.selected_task = task
+        $scope.selected_task = task
+        console.log("TCL: $scope.select_task -> task", task)
 	}
 
 
@@ -45,7 +46,8 @@ tasks_app.controller('tasks', ['$scope', '$http', function ($scope, $http) {
     $scope.delete_task = function () {
         $http({
             method: 'DELETE',
-            url: '/api/tasks/' + $scope.selected_task._id,
+            url: '/api/tasks/' + $scope.selected_task._id
+            console.log("$scope.selected_task._id", $scope.selected_task._id);
         }).then(function (res) {
             get_tasks()
             console.log("TCL: $scope.delete_task -> $Scope.selected_task", $Scope.selected_task)
@@ -65,7 +67,9 @@ tasks_app.controller('tasks', ['$scope', '$http', function ($scope, $http) {
         }).then(function (req) {
             $scope.tasks.filter(function (tasks) {
                 get_tasks()
+				console.log("TCL: $scope.complete_task -> get_tasks()", get_tasks())
                 return req.tasks
+				console.log("TCL: $scope.complete_task -> req.tasks", req.tasks)
             }).then(function (err) {
                 console.log('err', err);
             })
