@@ -6,6 +6,11 @@ body {
     
 }
 
+header img {
+    max-width: 2vw;
+    max-height: 3vw;
+}
+
 li:active{
     background-color: darkgrey;
 }
@@ -16,10 +21,14 @@ li:active{
 }
 .check {
     float: left;
-    margin-top: 1rem;
+    margin-top: 0.4rem;
     margin-left: 1rem;   
 }
-header img {
-    max-width: 2vw;
-    max-height: 3vw;
+.complete{
+    float: right;
+    border-radius: 5px;
+    font-size: 10px;
+    margin-top: .2rem;
+    margin-right: .3rem;   
 }
+

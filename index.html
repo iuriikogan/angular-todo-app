@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/node_modules/normalize.css/normalize.css">
 </head>
 <body ng_app="tasks_app" ng-controller="task">
-        <header><img src=".assets/logo.jpg" alt="todo logo" class="src"></header>
+        <header><img src="./assets/logo.jpg" alt="todo logo" class="src"></header>
         <div class="form-group">
             <h1>Iurii's tasks List</h1>
             <form role="form" id="new_task">
@@ -21,11 +21,11 @@
         </div>
 
         <div class="container" id="task" ng-repeat="task in tasks">
-            <uL>
-            <input type="checkbox" class="check" ng-click="delete_task(selected_task)">
-            <li class="list-group-itemng-click ng-class="active" : selected_task = ="select_task(selected_task)" ng-class="{'active' : selected_task == task')">{{tasks.name}}</li>
-            <button ng-click(complete_task(task)) class="complete" ng-click="complete_task(selected_task)">x</button>
-            </uL>
+            <div class="alert-success" ng-click ng-class="active" : selected_task = ="select_task(selected_task)" ng-class="{'active' : selected_task == task')">{{task.name}}
+                <input type="checkbox" class="check" ng-click="delete_task(selected_task)">
+                <button class="complete" ng-click="complete_task(selected_task)">x</button>
+            </div>
+        
         </div>
     </body>
 
