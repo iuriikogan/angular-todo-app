@@ -47,8 +47,8 @@ tasks_app.controller('tasks', ['$scope', '$http', function ($scope, $http) {
         $http({
             method: 'DELETE',
             url: '/api/tasks/' + $scope.selected_task._id
-            console.log("$scope.selected_task._id", $scope.selected_task._id);
         }).then(function (res) {
+            console.log("$scope.selected_task._id", $scope.selected_task._id);
             get_tasks()
             console.log("TCL: $scope.delete_task -> $Scope.selected_task", $Scope.selected_task)
             res.status(200)
