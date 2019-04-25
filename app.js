@@ -1,7 +1,3 @@
-import {
-    runInNewContext
-} from "vm";
-
 //config    
 const tasks_app = angular.module('tasks_app', [])
 // ##tasks controller##
@@ -58,7 +54,12 @@ tasks_app.controller('tasks', ['$scope', '$http', function ($scope, $http) {
     }
     //complete a task
     $scope.complete_task = function (selected_task) {
-        $http(
+        $http({
+            method: 'POST',
+            url: '/api/tasks/',
+            data: {
+                _id: task._id
+            }
         }).then(function (req) {
             $scope.tasks.filter(function (tasks) {
                 get_tasks()
@@ -68,6 +69,6 @@ tasks_app.controller('tasks', ['$scope', '$http', function ($scope, $http) {
             })
 
         })
-    }
+    }    
 
 }])

@@ -17,7 +17,7 @@ app.use(cors())
 require('./routes/routes-client')(app)
 require('./routes/routes-api')(app)
 // Static
-app.use(express.static(__dirname + '/client')) // serves all files in the /client folder as static
+app.use(express.static(__dirname + '/')) // serves all files in the /client folder as static
 // Errors
 app.use(function(err, req, res, next) {
 	console.log('err', err);
