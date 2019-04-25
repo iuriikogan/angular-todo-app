@@ -2,14 +2,16 @@
 const tasks_app = angular.module('tasks_app', [])
 // ##tasks controller##
 tasks_app.controller('tasks', ['$scope', '$http', function ($scope, $http) {
+    console.log('this is working')
     // ##get all tasks
     const get_tasks = function () {
         $http({
-            method: GET,
+            method: 'GET',
             url: '/api/tasks'
         })
     }.then((function (res) {
-        $scope.tasks = res.data
+        $scope.tasks = res.data;
+		console.log("TCL: get_tasks -> res.data", res.data)
     }, function (err) {
         console.log('err', err);
     }))
