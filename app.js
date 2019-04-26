@@ -15,20 +15,20 @@ tasks_app.controller('tasks', ['$scope', '$http', function ($scope, $http) {
 		})
 	
 
-    // //add a task
-    // add_task = function () {
-    //     $http({
-    //         method: POST,
-    //         url: '/api/tasks/',
-    //         data: {
-    //             "name": $scope.task.name;
-    //         }
-    //     })
-    // }.then(function (res) {
-    //       res.status(200)
-    // }), function(err) {
-	// 		console.log('err', err)
-    // }
+    //add a task
+//     const add_task = function () {
+//         $http({
+//             method: 'POST',
+//             url: '/api/tasks/',
+//             data: {
+//                 "name": $scope.task.name;
+//             }
+//         }), function(err) {
+//             console.log('err', err)
+//         },
+//         $scope.new_task = ''
+//     }
+// } 
     
 
     // // selected_task

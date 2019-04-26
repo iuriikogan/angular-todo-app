@@ -15,16 +15,15 @@
         <header><img src="./assets/logo.jpg" alt="todo logo" class="src"></header>
         <div class="form-group">
             <h1>Iurii's tasks List</h1>
-            <form role="form" id="new_task">
-                <input type="text" class="form-control" placeholder="Your Task" name="task" ng-modele="new_task">
+            <form role="form" id="new_task" ng-model="new_task">
+                <input type="text" class="form-control" placeholder="Your Task" name="task" ng-keyup="create_task($event)">
             </form>
-            <button type="button" class="btn btn btn-primary" ng-click=(select-task()) ng-click=(add_task(req.body))>Add</button>
         </div>
 
         <div class="container" id="task" ng-repeat="task in tasks">
-            <div class="alert-success" ng-class="active" : selected_task = ="select_task(selected_task)" ng-class="{'active' : selected_task == task')">{{task.name}}
-                <input type="checkbox" class="check" ng-click="delete_task(selected_task)">
-                <button class="complete" ng-click="complete_task(selected_task)">x</button>
+            <disv class="alert-success">{{task.name}}
+                <input type="checkbox" class="check">
+                <button class="complete">x</button>
             </div>
         
         </div>
